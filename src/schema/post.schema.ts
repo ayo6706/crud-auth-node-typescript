@@ -1,5 +1,61 @@
 import { object, string } from "yup";
 
+   // Create a post
+/**
+ * @openapi
+ * components:
+ *  schemas:
+ *    CreateUserPostInput:
+ *      type: object
+ *      required:
+ *        - title
+ *        - description
+ *      properties:
+ *        title:
+ *          type: string
+ *          default: This is a Post Title
+ *        description:
+ *          type: string
+ *          default: This is a Post description where you describe which posts
+ *        
+ *    CreateUserPostResponse:
+ *      type: object
+ *      properties:
+ *        title:
+ *          type: string
+ *        description:
+ *          type: string
+ *        _id:
+ *          type: string
+ *        createdAt:
+ *          type: string
+ *        updatedAt:
+ *          type: string
+ */
+
+
+  // Update a post
+
+/**
+ * @openapi
+ * components:
+ *   schema:
+ *     Post:
+ *       type: object
+ *       required:
+ *        - title
+ *        - body
+ *        
+ *       properties:
+ *         title:
+ *           type: string
+ *         body:
+ *           type: string
+ *         
+ */
+
+
+
 const payload = {
   body: object({
     title: string().required("Title is required"),

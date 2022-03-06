@@ -5,11 +5,15 @@ import User, { UserDocument } from "../model/user.model";
 
 export async function createUser(input: DocumentDefinition<UserDocument>) {
   try {
-    return await User.create(input);
-  } catch (error) {
+    
+    const user = await User.create(input);
+
+    return omit(user.toJSON(), "password");
+  } catch (error: any) {
     throw new Error(error);
   }
 }
+
 
 export async function findUser(query: FilterQuery<UserDocument>) {
   return User.findOne(query).lean();

@@ -5,6 +5,7 @@ import { UserDocument } from "./user.model";
 export interface PostDocument extends mongoose.Document {
   user: UserDocument["_id"];
   title: string;
+  postId: string;
   body: string;
   createdAt: Date;
   updatedAt: Date;
