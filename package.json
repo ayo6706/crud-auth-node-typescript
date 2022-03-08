@@ -21,7 +21,7 @@
     "pino": "^6.11.3",
     "pino-pretty": "^4.7.1",
     "yup": "^0.32.9",
-    "ts-node-dev": "^1.1.8",
+    "ts-node-dev": "^1.1.8"
   },
   "devDependencies": {
     "@types/bcrypt": "^3.0.1",
