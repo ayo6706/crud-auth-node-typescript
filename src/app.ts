@@ -1,4 +1,4 @@
-import express from "express";
+// import express from "express";
 import config from "config";
 import log from "./logger";
 import connect from "./db/connect";
